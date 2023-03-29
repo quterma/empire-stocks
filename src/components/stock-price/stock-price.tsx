@@ -10,13 +10,15 @@ export type Props = {
 export const StockPrice = ({ price, change, percent, up }: Props) => {
 	return (
 		<div>
-			<div>
-				{up ? <span>up</span> : <span>down</span>}
-				<span>{price}</span>
+			<div className="price-container">
+				<div className="triangle-wrapper">
+					<div className={`triangle-${up ? "up" : "down"}`}></div>
+				</div>
+				<div className="price">{price}</div>
 			</div>
-			<div>
-				<span>{change}</span>
-				<span>{percent}</span>
+			<div className="subinfo-container">
+				<div className={up ? "up" : "down"}>{change}</div>
+				<div className={up ? "up" : "down"}>({percent}%)</div>
 			</div>
 		</div>
 	);

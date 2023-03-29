@@ -21,7 +21,7 @@ export const stockInfoMapper = (stock: Stock) => {
 
 const formatStockDate = (dateString: string, utcOffset: number) => {
 	const timeOptions = {
-		timeStyle: "medium",
+		timeStyle: "short",
 		dateStyle: "medium",
 		hour12: false,
 		timeZone: "UTC",

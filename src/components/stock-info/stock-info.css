@@ -1,9 +1,6 @@
 .StockInfo {
-	padding: 10px;
+	padding: 10px 40px 50px;
 	box-shadow: 0 0 10px 1px lightgray;
 	display: flex;
 	justify-content: space-between;
-}
-
-.StockTitle {
 }

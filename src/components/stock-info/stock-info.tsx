@@ -26,7 +26,7 @@ export const StockInfo = () => {
 		<div className="StockInfo">
 			{stockInfo && (
 				<>
-					<StockTitle title={"Apple INC"} date={stockInfo.date} />
+					<StockTitle title={"Apple Inc"} date={stockInfo.date} />
 					<StockPrice up={stockInfo.up} price={stockInfo.price} change={stockInfo.change} percent={stockInfo.percent} />
 				</>
 			)}

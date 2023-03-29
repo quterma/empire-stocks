@@ -1,0 +1,48 @@
+.triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 17px solid green;
+}
+
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 17px solid red;
+}
+
+.triangle-wrapper {
+	padding-top: 22px;
+}
+
+.price-container {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.7rem;
+	padding-right: 20px;
+}
+
+.price {
+	font-size: 3rem;
+	font-weight: 600;
+}
+
+.subinfo-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.subinfo-container div {
+	font-size: 1.4rem;
+}
+
+.up {
+	color: green;
+}
+
+.down {
+	color: red;
+}
