@@ -11,12 +11,12 @@ export const Tabs = ({ config }: Props) => {
 
 	return (
 		<>
-			<div>
+			<div className="header">
 				{Object.entries(config).map(([key, tab]) => {
 					return (
-						<span className={key === activeTab ? "active" : ""} key={key} onClick={() => setActiveTab(key)}>
+						<div className={`tab ${key === activeTab ? "active" : ""}`} key={key} onClick={() => setActiveTab(key)}>
 							{tab.title}
-						</span>
+						</div>
 					);
 				})}
 			</div>
