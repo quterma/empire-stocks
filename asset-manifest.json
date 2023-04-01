@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/empire-stocks/static/css/main.d55d7b6b.css",
+    "main.js": "/empire-stocks/static/js/main.05a36b98.js",
+    "static/js/787.8c59e171.chunk.js": "/empire-stocks/static/js/787.8c59e171.chunk.js",
+    "index.html": "/empire-stocks/index.html",
+    "main.d55d7b6b.css.map": "/empire-stocks/static/css/main.d55d7b6b.css.map",
+    "main.05a36b98.js.map": "/empire-stocks/static/js/main.05a36b98.js.map",
+    "787.8c59e171.chunk.js.map": "/empire-stocks/static/js/787.8c59e171.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d55d7b6b.css",
+    "static/js/main.05a36b98.js"
+  ]
+}
