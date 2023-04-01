@@ -13,8 +13,6 @@ export const History = ({ stockData }: Props) => {
 	const [sortColumn, setSortColumn] = useState<Columns>("Date");
 	const [isUp, setIsUp] = useState<boolean>(false);
 
-	console.log("stockData", stockData);
-
 	const handleSort = (col: Columns) => {
 		if (col === sortColumn) {
 			setIsUp(isUp => !isUp);

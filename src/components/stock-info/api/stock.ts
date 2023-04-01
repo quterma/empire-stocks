@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export type Config = {
 	onOpen?: (event: any) => void;
@@ -61,7 +61,7 @@ export const useWebSocket = (url: string, config: Config) => {
 	const wsRef = useRef<WebSocket>();
 	const statusRef = useRef<typeof Status[keyof typeof Status]>();
 
-	const connect = useCallback(() => {
+	const connect = () => {
 		if (wsRef.current) return;
 
 		const ws = new WebSocket(url);
@@ -73,22 +73,19 @@ export const useWebSocket = (url: string, config: Config) => {
 		};
 
 		ws.onmessage = (ev: MessageEvent<string>) => {
-			console.log("message");
 			config.onMessage && config.onMessage(JSON.parse(ev.data) as StocksData);
 		};
 
 		ws.onerror = ev => {
-			console.log("error");
 			ws.close();
 		};
 
 		ws.onclose = ev => {
-			console.log("close");
 			config.onClose && config.onClose(ev);
 		};
 
 		wsRef.current = ws;
-	}, [config, subscriptionMessage, url]);
+	};
 
 	useEffect(() => {
 		connect();
@@ -97,5 +94,5 @@ export const useWebSocket = (url: string, config: Config) => {
 				wsRef.current?.close();
 			}
 		};
-	}, [connect]);
+	}, []);
 };

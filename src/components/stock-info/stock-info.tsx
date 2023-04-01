@@ -6,6 +6,7 @@ import { StockTitle } from "../stock-title";
 import { StocksData, useWebSocket } from "./api/stock";
 import { useState } from "react";
 import { stockInfoMapper, StockUI } from "./stock-info.mapper";
+import { Loader } from "../loader";
 
 export const StockInfo = () => {
 	const [stockInfo, setStockInfo] = useState<StockUI>();
@@ -24,11 +25,13 @@ export const StockInfo = () => {
 
 	return (
 		<div className="StockInfo">
-			{stockInfo && (
+			{stockInfo ? (
 				<>
 					<StockTitle title={"Apple Inc"} date={stockInfo.date} />
 					<StockPrice up={stockInfo.up} price={stockInfo.price} change={stockInfo.change} percent={stockInfo.percent} />
 				</>
+			) : (
+				<Loader />
 			)}
 		</div>
 	);
