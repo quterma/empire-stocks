@@ -1,0 +1,17 @@
+.frame-container {
+	width: 100%;
+	display: flex;
+	padding-top: 10px;
+}
+
+.frame {
+	color: black;
+	font-size: 1.1rem;
+	font-weight: 400;
+	padding: 20px 20px 10px;
+	cursor: pointer;
+}
+
+.active {
+	border-bottom: 1px solid black;
+}

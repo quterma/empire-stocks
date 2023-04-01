@@ -1,14 +1,15 @@
 import "./tabs.css";
-import { useState, ReactNode } from "react";
+import { ReactNode } from "react";
 
 type Tab = { component: ReactNode; title: string };
 export type Props = {
 	config: Record<string, Tab>;
+	activeTab: string;
+	setActiveTab: React.Dispatch<React.SetStateAction<string>>;
+	children: ReactNode;
 };
 
-export const Tabs = ({ config }: Props) => {
-	const [activeTab, setActiveTab] = useState<string>();
-
+export const Tabs = ({ config, activeTab, setActiveTab, children }: Props) => {
 	return (
 		<>
 			<div className="header">
@@ -20,6 +21,7 @@ export const Tabs = ({ config }: Props) => {
 					);
 				})}
 			</div>
+			{children}
 			{activeTab ? <div>{config[activeTab].component}</div> : null}
 		</>
 	);
