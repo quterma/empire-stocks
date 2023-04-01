@@ -31,7 +31,13 @@ export const History = ({ stockData }: Props) => {
 		Low: toFixed,
 		Open: toFixed,
 		Close: toFixed,
-		Change: (diff: any) => <div className={diff >= 0 ? "history-green" : "history-red"}>{toFixed(diff)}%</div>,
+		Change: (diff: any) => {
+			return diff === undefined ? (
+				"no data"
+			) : (
+				<div className={diff >= 0 ? "history-green" : "history-red"}>{toFixed(diff)}%</div>
+			);
+		},
 	};
 
 	const dataSort = (candle1: Candle, candle2: Candle) => {
